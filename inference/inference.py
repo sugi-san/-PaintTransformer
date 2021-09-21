@@ -189,7 +189,7 @@ def param2img_serial(
             if frame_dir is not None:
                 frame = crop(cur_canvas[:, :, patch_size_y // factor:-patch_size_y // factor,
                                         patch_size_x // factor:-patch_size_x // factor], original_h, original_w)
-                save_img(frame[0], os.path.join(frame_dir, '%03d.jpg' % idx))
+                save_img(frame[0], os.path.join(frame_dir, '%06d.jpg' % idx))
 
     if odd_idx_y.shape[0] > 0 and odd_idx_x.shape[0] > 0:
         for i in range(s):
@@ -210,7 +210,7 @@ def param2img_serial(
             if frame_dir is not None:
                 frame = crop(cur_canvas[:, :, patch_size_y // factor:-patch_size_y // factor,
                                         patch_size_x // factor:-patch_size_x // factor], original_h, original_w)
-                save_img(frame[0], os.path.join(frame_dir, '%03d.jpg' % idx))
+                save_img(frame[0], os.path.join(frame_dir, '%06d.jpg' % idx))
 
     if odd_idx_y.shape[0] > 0 and even_idx_x.shape[0] > 0:
         for i in range(s):
@@ -229,7 +229,7 @@ def param2img_serial(
             if frame_dir is not None:
                 frame = crop(cur_canvas[:, :, patch_size_y // factor:-patch_size_y // factor,
                                         patch_size_x // factor:-patch_size_x // factor], original_h, original_w)
-                save_img(frame[0], os.path.join(frame_dir, '%03d.jpg' % idx))
+                save_img(frame[0], os.path.join(frame_dir, '%06d.jpg' % idx))
 
     if even_idx_y.shape[0] > 0 and odd_idx_x.shape[0] > 0:
         for i in range(s):
@@ -248,7 +248,7 @@ def param2img_serial(
             if frame_dir is not None:
                 frame = crop(cur_canvas[:, :, patch_size_y // factor:-patch_size_y // factor,
                                         patch_size_x // factor:-patch_size_x // factor], original_h, original_w)
-                save_img(frame[0], os.path.join(frame_dir, '%03d.jpg' % idx))
+                save_img(frame[0], os.path.join(frame_dir, '%06d.jpg' % idx))
 
     cur_canvas = cur_canvas[:, :, patch_size_y // 4:-
                             patch_size_y // 4, patch_size_x // 4:-patch_size_x // 4]
