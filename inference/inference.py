@@ -6,6 +6,7 @@ import morphology
 import network
 import os
 import math
+from tqdm import tqdm  ###
 
 idx = 0
 
@@ -481,7 +482,7 @@ def run_inference(input_path, model_path, output_dir, need_animation=False, resi
         original_img_pad = pad(
             original_img, original_img_pad_size, original_img_pad_size)
         final_result = torch.zeros_like(original_img_pad).to(device)
-        for layer in range(0, K + 1):
+        for layer in tqdm(range(0, K + 1)):  ###
             layer_size = patch_size * (2 ** layer)
             img = F.interpolate(original_img_pad, (layer_size, layer_size))
             result = F.interpolate(
