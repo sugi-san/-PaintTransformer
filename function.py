@@ -87,8 +87,8 @@ def display_pic(folder):
 # --- size adjust --- 
 import cv2
 
-def size_opt(file):
-    max_size = 1280
+def size_opt(file, max_size):
+    #max_size = 1280
     npyImage = cv2.imread(filename = file, flags = cv2.IMREAD_COLOR)
     intWidth = npyImage.shape[1]
     intHeight = npyImage.shape[0]
